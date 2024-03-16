@@ -1,20 +1,22 @@
-import pygame as pg
+import pygame as pg 
 
-class Pipe:
-    def __init__(self, screen):
-        self.screen = screen
-        self.x = 100
+
+class Pup: 
+    def __init__(self, screen ):
+        self.screen = screen 
+        self.x = 250
         self.y = 250
 
-    def draw(self):
-        pg.draw.rect(self.screen)
+    def draw(self): 
+        pg.draw.rect(self.screen, 'green',(self.x, self.y, 30, 100))
+        
 
-    def move(self):
+    def move(self): 
         self.x -= 10
+        if self.x < 0:
+            self.x = 500
+            
 
-
-    def update(self):
-        pass
-
-
-
+    def update(self): 
+      pass 
+        
