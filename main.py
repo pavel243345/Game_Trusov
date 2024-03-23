@@ -1,6 +1,6 @@
 import pygame as pg 
 from player import Player 
-from pipe import Pipe
+from pup import Pup
 
 class Game:
     def __init__(self): 

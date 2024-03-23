@@ -6,6 +6,8 @@ class Player:
         self.bird_image = pg.image.load('sources/birds.png')
         self.x = 250
         self.y = 250
+        self.a = 1
+        self.speed = 0
         
 
 
@@ -17,8 +19,10 @@ class Player:
 
 
     def move(self, keys): 
-        if keys[pg.K_SPACE]: 
-            self.y -= 10
+        self.speed += self.a
+        self.y += self.speed
+        if keys[pg.K_SPACE]:
+            self.speed = -20
 
 
     def update(self): 
